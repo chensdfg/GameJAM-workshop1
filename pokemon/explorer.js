@@ -33,21 +33,21 @@ function showPokemon(pokemon) {
   // pokemon.height is its height in decimetres (10 decimetres = 1 metre).
   // Syntax example — adapt the attribute and divisor; this is not a real API field:
   // heightText.textContent = (pokemon.attribute / divisor) + ' m';
-  heightText.textContent = '?';
+  heightText.textContent =  (pokemon.height/10) +'m';
 
   // OPTIONAL TODO 2: display weight in kilograms.
   // Find the field in the API response. 10 hectograms = 1 kilogram.
   // weightText.textContent = (pokemon.attribute / divisor) + ' kg';
-  weightText.textContent = '?';
+  weightText.textContent = (pokemon.weight/10)+'kg';
 
   // OPTIONAL TODO 3: display the Pokémon's Pokédex number.
   // numberText.textContent = pokemon.attribute;
-  numberText.textContent = '?';
+  numberText.textContent = pokemon.number;
 
   // OPTIONAL TODO 4: display its first type (for example, electric).
   // types is an array. [0] reads its first item, which contains a type object.
   // Syntax example for nested data: object.list[0].detail.attribute
-  typeText.textContent = '?';
+  typeText.textContent = pokemon.types[0].type.name;
 
   const sprite = pokemon.sprites.front_default;
   image.hidden = !sprite;
